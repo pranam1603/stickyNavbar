@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.hid {
+    overflow: hidden;
+}
+
+nav {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #222;
+    transition: all 0.7s ease-in-out;
+}
+
+nav .container {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    font-size: 35px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.7s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    transition: all 0.7s ease-in-out;
+}
+
+nav .current,
+nav li:hover,
+nav.active .current,
+nav.active li:hover {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+nav li {
+    padding: 7px 15px;
+    color: #fff;
+    font-size: 17px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav.active {
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+nav.active li {
+    color: #000;
+}
+
+nav.active a {
+    color: #000;
+}
+
+nav.active .container {
+    padding: 0px 0px;
+}
+
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1619810149052-845d58bac62f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=711&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: -2;
+    position: relative;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.content {
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.content p {
+    line-height: 30px;
+    letter-spacing: 1.5px;
+}
